@@ -4,6 +4,7 @@ USE simpsons;
 CREATE TABLE IF NOT EXISTS characters(
     id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(20) NOT NULL,
+    image VARCHAR(500),
     last_name VARCHAR(40) NOT NULL,
     age INTEGER,
     ocupation VARCHAR(50),
