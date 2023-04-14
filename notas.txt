@@ -1,1 +1,3 @@
 hacer tablas para personajes por episodio
+verificar si no hay que hacer image id
+hacer documentacion solo tomo los personajes principales y secundarios conocidos
