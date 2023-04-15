@@ -14,9 +14,9 @@ CREATE TABLE IF NOT EXISTS seasons(
     id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
     num_season INTEGER NOT NULL,
     eps INTEGER NOT NULL,
-    date_season TIMESTAMP NOT NULL
+    date_season DATE NOT NULL
 );
-
+--quiero obtneer los personajes que aparecen por temporada por temporada
 /*transitive table*/
 CREATE TABLE IF NOT EXISTS characters_seasons(
     id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -31,18 +31,18 @@ CREATE TABLE IF NOT EXISTS characters_seasons(
 
 CREATE TABLE IF NOT EXISTS episodes(
     id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    duration time,
-    num_episode INTEGER NOT NULL,
-    tittle VARCHAR(60),
-    description_ep text,
     season_id INTEGER NOT NULL,
     CONSTRAINT episodes_seasons
-    FOREIGN KEY (season_id) REFERENCES seasons(id) ON UPDATE CASCADE ON DELETE CASCADE
+    FOREIGN KEY (season_id) REFERENCES seasons(id) ON UPDATE CASCADE ON DELETE CASCADE,
+    num_episode INTEGER NOT NULL,
+    title VARCHAR(200),
+    description_ep text
+    
 ); 
 
 
 
-/* transitive table */
+/* transitive table*/
 CREATE TABLE IF NOT EXISTS characters_episodes(
     id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
     character_id INTEGER NOT NULL,
