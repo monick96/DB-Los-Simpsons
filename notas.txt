@@ -1,3 +1,0 @@
-hacer tablas para personajes por episodio// esta opcion evaluarla debido a que ya es complicado armar al personaje por temporada
-verificar si no hay que hacer image id
-hacer documentacion solo tomo los personajes principales y secundarios conocidos
